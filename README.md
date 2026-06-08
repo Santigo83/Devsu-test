@@ -1,40 +1,78 @@
-# Automatizacion Cypress
+# Cypress Automation Project | Proyecto de Automatización Cypress
 
-Proyecto de automatizacion con Cypress y Cucumber usando Gherkin.
+## Overview | Descripción
 
-Incluye pruebas E2E para SauceDemo y pruebas API para Swagger Petstore.
+**English**
 
-## Requisitos
+Automation project built with Cypress, Cucumber, and Gherkin.
 
-- Node.js instalado
-- npm instalado
-- Acceso a internet para ejecutar pruebas contra:
-  - `https://www.saucedemo.com/`
-  - `https://petstore.swagger.io/v2`
+The project includes:
 
-## Instalacion
+* End-to-End (E2E) tests for SauceDemo.
+* API tests for Swagger Petstore.
 
-Desde la raiz del proyecto ejecutar:
+**Español**
+
+Proyecto de automatización desarrollado con Cypress, Cucumber y Gherkin.
+
+Incluye:
+
+* Pruebas End-to-End (E2E) para SauceDemo.
+* Pruebas de API para Swagger Petstore.
+
+---
+
+## Requirements | Requisitos
+
+**English**
+
+* Node.js installed
+* npm installed
+* Internet access to execute tests against:
+
+  * https://www.saucedemo.com/
+  * https://petstore.swagger.io/v2
+
+**Español**
+
+* Node.js instalado
+* npm instalado
+* Acceso a internet para ejecutar pruebas contra:
+
+  * https://www.saucedemo.com/
+  * https://petstore.swagger.io/v2
+
+---
+
+## Installation | Instalación
+
+From the project root execute:
+
+Desde la raíz del proyecto ejecutar:
 
 ```bash
 npm install
 ```
 
-## Ejecucion de pruebas
+---
 
-### Abrir Cypress en modo interactivo
+## Test Execution | Ejecución de Pruebas
+
+### Open Cypress in Interactive Mode | Abrir Cypress en modo interactivo
 
 ```bash
 npm run cy:open
 ```
 
-### Ejecutar todas las pruebas
+### Run All Tests | Ejecutar todas las pruebas
 
 ```bash
 npm run cy:run
 ```
 
-### Ejecutar pruebas smoke
+### Run Smoke Tests | Ejecutar pruebas Smoke
+
+Runs scenarios tagged with `@smoke`.
 
 Ejecuta los escenarios marcados con `@smoke`.
 
@@ -42,7 +80,9 @@ Ejecuta los escenarios marcados con `@smoke`.
 npm run cy:run:tags
 ```
 
-### Ejecutar pruebas API
+### Run API Tests | Ejecutar pruebas API
+
+Runs scenarios tagged with `@api`.
 
 Ejecuta los escenarios marcados con `@api`.
 
@@ -50,7 +90,9 @@ Ejecuta los escenarios marcados con `@api`.
 npm run cy:run:api
 ```
 
-## Estructura del proyecto
+---
+
+## Project Structure | Estructura del Proyecto
 
 ```text
 cypress/
@@ -83,45 +125,68 @@ cypress/
     e2e.js
 ```
 
-## Patron de diseno
+---
 
-### Pruebas E2E
+## Design Pattern | Patrón de Diseño
 
-Las pruebas web usan Page Object Model.
+### E2E Tests | Pruebas E2E
 
-- `pages/`: contiene las acciones y elementos de cada pagina.
-- `features/`: contiene los escenarios en Gherkin.
-- `step_definitions/`: conecta los pasos Gherkin con los page objects.
+The web automation follows the Page Object Model (POM) pattern.
 
-### Pruebas API
+La automatización web utiliza el patrón Page Object Model (POM).
 
-Las pruebas API mantienen responsabilidades separadas.
+* `pages/`: page elements and actions.
+* `features/`: Gherkin scenarios.
+* `step_definitions/`: connects Gherkin steps with page objects.
 
-- `PetApi.js`: contiene los metodos HTTP.
-- `PetPayload.js`: construye los cuerpos de las solicitudes.
-- `features/api/`: contiene un feature por caso de prueba.
-- `step_definitions/api/`: contiene un archivo de steps por feature.
+### API Tests | Pruebas API
 
-## Flujo API cubierto
+API automation follows a separation of responsibilities approach.
 
-Las pruebas API validan:
+La automatización API mantiene una separación clara de responsabilidades.
 
-- Crear una mascota con `POST /pet`
-- Consultar una mascota por id con `GET /pet/{petId}`
-- Actualizar una mascota con `PUT /pet`
-- Consultar mascotas por status con `GET /pet/findByStatus`
+* `PetApi.js`: HTTP methods and endpoint interactions.
+* `PetPayload.js`: request body builders.
+* `features/api/`: feature files for each test scenario.
+* `step_definitions/api/`: step definitions for each feature.
 
-El id de la mascota se genera de forma dinamica usando `Date.now()` para evitar datos quemados y conflictos con ejecuciones anteriores.
+---
 
-## Artefactos de ejecucion
+## API Test Coverage | Cobertura de Pruebas API
 
-Cypress puede generar archivos locales durante la ejecucion, por ejemplo:
+The API suite validates:
 
-- screenshots
-- videos
-- downloads
+* Create a pet using `POST /pet`
+* Retrieve a pet by ID using `GET /pet/{petId}`
+* Update a pet using `PUT /pet`
+* Find pets by status using `GET /pet/findByStatus`
 
-Estos archivos pueden aparecer en carpetas como:
+La suite de API valida:
+
+* Crear una mascota con `POST /pet`
+* Consultar una mascota por ID con `GET /pet/{petId}`
+* Actualizar una mascota con `PUT /pet`
+* Consultar mascotas por estado con `GET /pet/findByStatus`
+
+A dynamic pet ID is generated using `Date.now()` to avoid hardcoded data and execution conflicts.
+
+Se genera un ID dinámico utilizando `Date.now()` para evitar datos quemados y conflictos entre ejecuciones.
+
+---
+
+## Execution Artifacts | Artefactos de Ejecución
+
+Cypress may generate local artifacts during execution, including:
+
+* Screenshots
+* Videos
+* Downloads
+
+Cypress puede generar artefactos locales durante la ejecución, incluyendo:
+
+* Capturas de pantalla
+* Videos
+* Descargas
 
 ```text
 cypress/screenshots
