@@ -1,14 +1,31 @@
-Conclusiones
+## Conclusions | Conclusiones
 
-- Se usa Gherkin para describir los escenarios de forma clara y entendible.
-- Se mantiene Page Object Model para separar acciones de pagina y steps.
-- Las pruebas API separan requests, payloads, features y steps.
-- Se usan datos dinamicos para evitar valores quemados.
-- El id de la mascota se genera con Date.now().
-- Usar datos dinamicos reduce conflictos entre ejecuciones.
-- Cada feature API valida un caso especifico.
-- Los steps solo orquestan el flujo y validan resultados.
-- PetApi centraliza los metodos HTTP.
-- PetPayload centraliza la construccion de datos de prueba.
-- Los tags permiten ejecutar grupos de pruebas como @smoke o @api.
-- La estructura separada facilita mantenimiento y lectura.
+**English**
+
+* Gherkin is used to describe test scenarios in a clear and readable way.
+* The Page Object Model (POM) pattern is used to separate page actions from test steps.
+* API tests separate requests, payloads, features, and step definitions.
+* Dynamic data is used to avoid hardcoded values.
+* Pet IDs are generated using `Date.now()`.
+* Using dynamic data reduces conflicts between test executions.
+* Each API feature validates a specific test case.
+* Step definitions focus on orchestrating the flow and validating results.
+* `PetApi` centralizes HTTP methods and endpoint interactions.
+* `PetPayload` centralizes test data creation.
+* Tags allow execution of specific test groups such as `@smoke` and `@api`.
+* The project structure improves maintainability, scalability, and readability.
+
+**Español**
+
+* Se utiliza Gherkin para describir los escenarios de prueba de forma clara y entendible.
+* Se implementa el patrón Page Object Model (POM) para separar las acciones de página de los pasos de prueba.
+* Las pruebas API separan las solicitudes, payloads, features y step definitions.
+* Se utilizan datos dinámicos para evitar valores quemados.
+* El identificador de la mascota se genera mediante `Date.now()`.
+* El uso de datos dinámicos reduce conflictos entre ejecuciones.
+* Cada feature de API valida un caso de prueba específico.
+* Los step definitions se encargan de orquestar el flujo y validar los resultados.
+* `PetApi` centraliza los métodos HTTP y las interacciones con los endpoints.
+* `PetPayload` centraliza la construcción de datos de prueba.
+* Los tags permiten ejecutar grupos específicos de pruebas como `@smoke` y `@api`.
+* La estructura del proyecto facilita el mantenimiento, la escalabilidad y la lectura del código.
