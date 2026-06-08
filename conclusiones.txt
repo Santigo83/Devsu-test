@@ -1,31 +1,31 @@
-## Conclusions | Conclusiones
+Conclusions | Conclusiones
 
-**English**
+English
 
 * Gherkin is used to describe test scenarios in a clear and readable way.
 * The Page Object Model (POM) pattern is used to separate page actions from test steps.
 * API tests separate requests, payloads, features, and step definitions.
 * Dynamic data is used to avoid hardcoded values.
-* Pet IDs are generated using `Date.now()`.
+* Pet IDs are generated using 'Date.now()'.
 * Using dynamic data reduces conflicts between test executions.
 * Each API feature validates a specific test case.
 * Step definitions focus on orchestrating the flow and validating results.
-* `PetApi` centralizes HTTP methods and endpoint interactions.
-* `PetPayload` centralizes test data creation.
-* Tags allow execution of specific test groups such as `@smoke` and `@api`.
+* 'PetApi' centralizes HTTP methods and endpoint interactions.
+* 'PetPayload' centralizes test data creation.
+* Tags allow execution of specific test groups such as '@smoke' and '@api'.
 * The project structure improves maintainability, scalability, and readability.
 
-**Español**
+Español
 
 * Se utiliza Gherkin para describir los escenarios de prueba de forma clara y entendible.
 * Se implementa el patrón Page Object Model (POM) para separar las acciones de página de los pasos de prueba.
 * Las pruebas API separan las solicitudes, payloads, features y step definitions.
 * Se utilizan datos dinámicos para evitar valores quemados.
-* El identificador de la mascota se genera mediante `Date.now()`.
+* El identificador de la mascota se genera mediante 'Date.now()'.
 * El uso de datos dinámicos reduce conflictos entre ejecuciones.
 * Cada feature de API valida un caso de prueba específico.
 * Los step definitions se encargan de orquestar el flujo y validar los resultados.
-* `PetApi` centraliza los métodos HTTP y las interacciones con los endpoints.
-* `PetPayload` centraliza la construcción de datos de prueba.
-* Los tags permiten ejecutar grupos específicos de pruebas como `@smoke` y `@api`.
+* 'PetApi' centraliza los métodos HTTP y las interacciones con los endpoints.
+* 'PetPayload' centraliza la construcción de datos de prueba.
+* Los tags permiten ejecutar grupos específicos de pruebas como '@smoke' y '@api'.
 * La estructura del proyecto facilita el mantenimiento, la escalabilidad y la lectura del código.
