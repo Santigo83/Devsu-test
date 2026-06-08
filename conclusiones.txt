@@ -1,0 +1,14 @@
+Conclusiones
+
+- Se usa Gherkin para describir los escenarios de forma clara y entendible.
+- Se mantiene Page Object Model para separar acciones de pagina y steps.
+- Las pruebas API separan requests, payloads, features y steps.
+- Se usan datos dinamicos para evitar valores quemados.
+- El id de la mascota se genera con Date.now().
+- Usar datos dinamicos reduce conflictos entre ejecuciones.
+- Cada feature API valida un caso especifico.
+- Los steps solo orquestan el flujo y validan resultados.
+- PetApi centraliza los metodos HTTP.
+- PetPayload centraliza la construccion de datos de prueba.
+- Los tags permiten ejecutar grupos de pruebas como @smoke o @api.
+- La estructura separada facilita mantenimiento y lectura.
